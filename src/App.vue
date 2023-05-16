@@ -14,6 +14,15 @@ export default {
 </script>
 
 <style>
+:root {
+  --primary-color: #7149C6;
+  --secondary-color: #FC2947;
+  --third-color: #FE6244;
+  --fourth-color: #FFDEB9;
+  --grey: #343a40;
+  --dark: #191b1d;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
