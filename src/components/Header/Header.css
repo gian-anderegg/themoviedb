@@ -1,6 +1,7 @@
 .header {
     height: 200px;
-    width: 800px;
+    width: 60%;
+    min-width: 600px;
     background-image: url(../../assets/Gradient.jpeg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
