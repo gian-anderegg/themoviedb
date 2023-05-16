@@ -1,11 +1,15 @@
 <template>
+  <Header />
   <router-view></router-view>
 </template>
 
 <script>
+import Header from './components/Header/Header.vue'
 export default {
   name: "App",
-  components: {},
+  components: {
+    Header
+  },
 };
 </script>
 
@@ -16,6 +20,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding: 30px;
 }
 </style>
