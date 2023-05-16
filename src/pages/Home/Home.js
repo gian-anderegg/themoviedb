@@ -1,5 +1,3 @@
 export default {
-    name: 'App',
-    components: {
-    }
+    name: 'Home'
 }
