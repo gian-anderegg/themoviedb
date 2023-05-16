@@ -1,5 +1,24 @@
 # themoviedb
-VueJS 3 Frontend for The Movie DB (www.themoviedb.org)
-- API Implementation
-- Access to Features
-- Easily Extendable
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
