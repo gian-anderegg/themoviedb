@@ -1,2 +1,5 @@
 # themoviedb
-School Project from Dominik, Lukas, Neo, Gian
+VueJS 3 Frontend for The Movie DB (www.themoviedb.org)
+- API Implementation
+- Access to Features
+- Easily Extendable
