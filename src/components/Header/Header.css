@@ -37,6 +37,9 @@
 
 .header__right {
     width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .language {
@@ -46,4 +49,27 @@
     border-top-right-radius: 8px;
     background-color: #ffffff51;
     border: none;
+}
+
+.button {
+    display: flex;
+    gap: 8px;
+}
+
+.button-icon {
+    background-image: url(../../assets/red-heart-icon.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    width: 24px;
+}
+
+.search-icon {
+    background-image: url(../../assets/search.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    width: 24px;
 }
