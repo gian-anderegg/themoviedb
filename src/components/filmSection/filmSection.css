@@ -4,6 +4,7 @@
     grid-template-columns: auto auto auto;
     background-color: #2196F3;
     padding: 10px;
+    column-gap: 50px;
 }
 
 .grid-item {
@@ -13,4 +14,9 @@
     font-size: 30px;
     text-align: center;
   }
+
+  .responsive-imgs {
+    max-width: 100%;
+    height: auto;
+}
   

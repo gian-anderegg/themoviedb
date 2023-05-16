@@ -2,7 +2,6 @@
   <div>
     <h1>The Movie DB</h1>
     <filmSection />
-    <h1>Hello</h1>
   </div>
 </template>
 
