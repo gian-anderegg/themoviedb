@@ -1,14 +1,18 @@
 <template>
     <div class="header">
-        <header class="d-flex justify-content-center py-3">
-            <ul class="nav nav-pills">
-              <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            </ul>
-          </header>
+        <div class="header__left">
+            <div class="title-container">
+                <span class="title">The Movie</span>
+                <span class="title">Database</span>
+            </div>
+            <input type="search" class="searchbar form-control"/>
+        </div>
+        <div class="header__right">
+            <select class="language" data-width="fit">
+                <option value="Englisch">EN</option>
+                <option value="Deutsch">DE</option>
+            </select>
+        </div>
     </div>
 </template>
   
