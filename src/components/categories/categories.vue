@@ -1,45 +1,17 @@
 <template>
-  <div
-    @click="category_clicked()"
-    class="category"
-    :class="{ 'category-selected': selected }"
-  >
-    <h4>{{ category_name }}</h4>
+  <div class="wrapper">
+    <div
+      @click="(category.selected = !category.selected), category_clicked()"
+      class="category"
+      :class="{ 'category-selected': category.selected }"
+      v-for="category in categories"
+      :key="category"
+    >
+      <h4>{{ category.name }}</h4>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "categories",
-  data() {
-    return {
-      selected: true,
-    };
-  },
-  props: {
-    category_name: String,
-  },
-  methods: {
-    category_clicked() {
-      this.selected = !this.selected;
-      this.$emit("selectedStateChange", this.selected);
-    },
-  },
-};
-</script>
+<script src="./categories.js"></script>
 
-<style scoped>
-.category {
-  border: 1px solid black;
-  width: 200px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-}
-
-.category-selected {
-  background: #7149c6;
-}
-</style>
+<style src="./categories.css" scoped></style>
