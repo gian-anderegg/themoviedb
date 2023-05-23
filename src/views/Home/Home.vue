@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <h1>The Movie DB</h1>
-    <filmSection />
-    <i class="bi bi-heart"></i>
+  <div class="wrapper">
+    <categories
+      class="categories"
+      @selected-state-change="selectedStateChange"
+      :categories="categories"
+    ></categories>
   </div>
 </template>
 
