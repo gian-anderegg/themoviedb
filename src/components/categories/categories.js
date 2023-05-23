@@ -3,7 +3,7 @@ export default {
     data() {
       return {
         selected: true,
-        selectedCategoryIds: [],
+        selectedCategoryId: [],
       };
     },
     props: {
@@ -16,7 +16,7 @@ export default {
             if (category.id == id) return { ...category, selected: true }
             return { ...category, selected: false }
           });
-        this.$emit("selectedStateChange", this.selectedCategoryIds);
+        this.$emit("selectedStateChange", this.selectedCategoryId);
       },
     },
   };

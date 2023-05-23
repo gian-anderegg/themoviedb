@@ -7,7 +7,7 @@
       v-for="category in categories"
       :key="category"
     >
-      <h4>{{ category.name }}</h4>
+      <div class="text">{{ category.name }}</div>
     </div>
   </div>
 </template>
