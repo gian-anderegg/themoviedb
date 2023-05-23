@@ -1,4 +1,4 @@
-import filmSection from "../../components/filmSection/filmSection"
+import filmSection from "../../components/filmSection/filmSection.vue"
 import categories from "../../components/categories/categories.vue"
 
 export default {

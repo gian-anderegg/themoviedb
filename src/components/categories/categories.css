@@ -15,6 +15,11 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    transition: .3s;
+}
+
+.category:hover {
+    transform: scale(0.95);
 }
   
 .category-selected {
