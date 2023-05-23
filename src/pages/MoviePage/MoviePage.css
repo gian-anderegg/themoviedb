@@ -1,0 +1,22 @@
+.movie-page {
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.movie-image {
+    width: 200px;
+    height: 400px;
+}
+
+.movie-data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.movie-title {}
