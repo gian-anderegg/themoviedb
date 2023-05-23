@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div
-      @click="(category.selected = !category.selected), category_clicked()"
+      @click="category_clicked(category.id)"
       class="category"
       :class="{ 'category-selected': category.selected }"
       v-for="category in categories"

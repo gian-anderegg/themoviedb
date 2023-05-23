@@ -10,10 +10,12 @@ export default {
       categories: Array,
     },
     methods: {
-      category_clicked() {
-        this.selectedCategoryIds = this.categories
-          .filter((item) => item.selected)
-          .map((item) => item.id);
+      category_clicked(id) {
+        this.selectedCategoryId = this.categories
+          .map((category) => {
+            if (category.id == id) return { ...category, selected: true }
+            return { ...category, selected: false }
+          });
         this.$emit("selectedStateChange", this.selectedCategoryIds);
       },
     },
