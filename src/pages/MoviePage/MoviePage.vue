@@ -1,6 +1,6 @@
 <template>
   <div class="movie-page">
-    <div class="icon"></div>
+    <div @click="goPageBack()" class="icon"></div>
     <div class="movie-info">
         <img class="movie-image" src="@/assets/Gradient.jpeg" />
         <div class="movie-data">

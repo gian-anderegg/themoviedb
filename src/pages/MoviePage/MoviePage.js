@@ -1,3 +1,5 @@
+import router from '@/router';
+
 export default{
     name: 'MoviePage',
     data(){
@@ -12,5 +14,8 @@ export default{
       }
     },
     methods:{
+      goPageBack() {
+        router.go(-1); // Go back to the previous page
+      }
     }
 }
