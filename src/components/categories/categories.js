@@ -13,7 +13,7 @@ export default {
       category_clicked(id) {
         this.selectedCategoryId = this.categories
           .map((category) => {
-            if (category.id == id) return { ...category, selected: true }
+            if (category.id == id) return { ...category, selected: !category.selected }
             return { ...category, selected: false }
           });
         this.$emit("selectedStateChange", this.selectedCategoryId);
