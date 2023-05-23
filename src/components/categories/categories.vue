@@ -1,13 +1,13 @@
 <template>
   <div class="wrapper">
     <div
-      @click="(category.selected = !category.selected), category_clicked()"
+      @click="category_clicked(category.id)"
       class="category"
       :class="{ 'category-selected': category.selected }"
       v-for="category in categories"
       :key="category"
     >
-      <h4>{{ category.name }}</h4>
+      <div class="text">{{ category.name }}</div>
     </div>
   </div>
 </template>

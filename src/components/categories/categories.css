@@ -2,14 +2,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    overflow: scroll;
+    overflow: auto;
     gap: 20px;
 }
   
 .category {
     border: 1.5px solid black;
     width: 100%;
-    height: 100px;
+    height: 38px;
     padding: 0 50px;
     display: flex;
     justify-content: center;
@@ -20,4 +20,8 @@
 .category-selected {
     background: #7149c6;
     color: white;
+}
+
+.text {
+    font-size: medium;
 }
