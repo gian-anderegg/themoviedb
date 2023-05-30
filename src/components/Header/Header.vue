@@ -13,9 +13,9 @@
             </div>            
         </div>
         <div class="header__right">
-            <select class="language" data-width="fit">
-                <option value="Englisch">EN</option>
-                <option value="Deutsch">DE</option>
+            <select class="language" data-width="fit" @change="changeLanguage">
+                <option value="en">EN</option>
+                <option value="de">DE</option>
             </select>
             <router-link v-if="isOnHome" to="favourites" class="button btn btn-outline-dark">Your Favourite Movies <span class="button-icon"></span></router-link>
             <router-link v-if="isOnFavourites" to="home" class="button btn btn-outline-dark">Discorver Movies <span class="search-icon"></span></router-link>
