@@ -8,7 +8,7 @@
                         <img class="responsive-imgs" :src="'https://image.tmdb.org/t/p/original' + movie.poster_path">
                     </div>
                     <div class="gardiant-container"></div>
-                    <span class="heart-icon" :class="{ empty: isMovieClicked(movie) }" @click="handleClick(movie)"></span>
+                    <span class="heart-icon" :class="{ filled: isMovieClicked(movie) }" @click="handleClick(movie)"></span>
                 </div>
             </div>
         </div>
