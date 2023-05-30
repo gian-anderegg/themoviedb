@@ -50,6 +50,7 @@ export default {
         },
         selectedStateChange(selected) {
             this.categories = selected;
+            this.$emit("categorySelected");
 
             if (this.categories.every(category => category.selected === false)) {
                 this.isSearch = true;
