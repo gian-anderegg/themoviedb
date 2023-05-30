@@ -20,7 +20,8 @@ export default {
             this.$emit("search", this.searchString);
         },
         clear() {
-
+            this.searchString = '';
+            this.$emit("clear");
         },
     }
 };

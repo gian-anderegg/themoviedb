@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header @search="search" @clear="clear"/>
   <router-view></router-view>
 </template>
 
@@ -10,6 +10,19 @@ export default {
   components: {
     Header
   },
+  data() {
+    return {
+      searchString: '',
+    }
+  },
+  methods: {
+    search(searchString) {
+      this.searchString = searchString;
+    },
+    clear(){
+      this.searchString = '';
+    }
+  }
 };
 </script>
 
