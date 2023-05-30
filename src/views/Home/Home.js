@@ -12,18 +12,35 @@ export default {
     data() {
         return {
             categories: config.movieCategories,
+            selectedCategoryRessource: '',
             movies: []
         }
     },
     methods: {
+        // increment page function
         selectedStateChange(selected) {
-            this.categories = selected
+            this.categories = selected;
+            this.selectedCategoryRessource = this.categories.filter(category => category.selected === true)[0].ressource;
+            this.loadMoviesByCategory(this.selectedCategoryRessource);
+        },
+        async loadMoviesByCategory(ressource) {
+            const res = await APIService.getMoviesByCategory(ressource, 1); // increment page in future.
+
+            if (ressource == 'latest') {
+                this.movies = [];
+                this.movies.push(res.data);
+            } else {
+                this.movies = res.data.results;
+            }
+
+            console.log(res);
+        },
+        async loadMovies() {
+            const res = await APIService.getMovies(1); // increment page in future.
+            this.movies = res.data.results;
         }
     },
-    async mounted() {
-        const res = await APIService.getMoviesContaining("The", 1);
-        this.movies = res.data.results;
-
-        console.log(res.data.results);
+    mounted() {
+        this.loadMovies();
     }
 }

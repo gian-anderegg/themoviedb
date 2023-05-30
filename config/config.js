@@ -26,10 +26,10 @@ const movieCategories = [
         ressource: "top_rated"
     },
     {
-        name: "Upcomming",
+        name: "Upcoming",
         selected: false,
         id: 5,
-        ressource: "upcomming"
+        ressource: "upcoming"
     },
 ];
 

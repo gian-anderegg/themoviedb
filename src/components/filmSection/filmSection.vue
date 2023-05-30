@@ -5,6 +5,7 @@
                     <div class="grid-item">
                         <h4>{{ movie.title }}</h4>
                         <img class="responsive-imgs" :src="'https://image.tmdb.org/t/p/original' + movie.poster_path">
+                        <!-- if movie poster not found (replace with replacement picture) -->
                         <div class="gardiant-container"></div>
                 </div>
             </div>
