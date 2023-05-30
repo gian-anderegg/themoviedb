@@ -28,7 +28,7 @@
       <router-link
         v-if="isOnHome"
         to="favourites"
-        class="button btn btn-outline-dark"
+        class="button btn favoritesButton"
         >{{ $t("favoritesButton") }} <span class="button-icon"></span
       ></router-link>
       <router-link
