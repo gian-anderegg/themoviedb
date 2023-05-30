@@ -5,6 +5,7 @@
       @selected-state-change="selectedStateChange"
       :categories="categories"
     ></categories>
+    <filmSection></filmSection>
   </div>
   <div class="filmSectionWrapper">
     <filmSection class="filmSection" :movies="movies" />
