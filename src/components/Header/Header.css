@@ -2,8 +2,8 @@
     height: 200px;
     width: 80%;
     min-width: 600px;
-    background-image: url(../../assets/Gradient.jpeg);
-    background-size: 100% 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,255,188,0) 0%, rgba(5,14,19,1) 0%, rgba(0,20,106,1) 100%);
     background-repeat: no-repeat;
     display: flex;
     padding: 20px;
@@ -28,7 +28,7 @@
 
 .title {
     font-size: xx-large;
-    color: var(--dark);
+    color: white;
     font-weight: bold;
 }
 
