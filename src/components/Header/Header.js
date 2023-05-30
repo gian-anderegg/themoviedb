@@ -1,10 +1,20 @@
+import { i18n } from '../../main.js';
+
 export default {
     name: "Header",
-    emits: ['search'],
-    components: {},
+    emits: ['search', 'clear'],
+    props: {
+        searchStringProp: String
+    },
+    watch: {
+        searchStringProp(newVal) {
+            console.log("watch changed")
+            this.searchString = newVal
+        }
+    },
     data() {
         return {
-            searchString: '',
+            searchString: this.searchStringProp,
         }
     },
     computed: {
@@ -22,6 +32,10 @@ export default {
         clear() {
             this.searchString = '';
             this.$emit("clear");
+        },
+        changeLanguage(event) {
+            i18n.global.locale = event.target.value;
+            console.log(i18n.global.locale);
         },
     }
 };

@@ -19,7 +19,7 @@ export default {
      * - Requst for all Categories
      */
     async getMoviesByCategory(category, page) {
-        return await HTTPService.get('movie/ ' + category, {
+        return await HTTPService.get('movie/' + category, {
             params: {
                 page: page
             }

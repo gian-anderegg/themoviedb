@@ -5,11 +5,11 @@
       @selected-state-change="selectedStateChange"
       :categories="categories"
     ></categories>
-    <filmSection></filmSection>
   </div>
   <div class="filmSectionWrapper">
-    <filmSection class="filmSection" :movies="movies" />
+    <filmSection class="filmSection" :movies="movies" ref="filmSectionRef" />
   </div>
+  <div class="end" ref="intersectionTargetRef"></div>
 </template>
 
 <script src="./Home.js" />

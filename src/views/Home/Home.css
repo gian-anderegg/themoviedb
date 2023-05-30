@@ -1,13 +1,16 @@
 .wrapper {
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 .filmSection {
     width: 80%;
+    overflow-y: auto;
 }
 
 .filmSectionWrapper {
+    margin-top: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,4 +19,8 @@
 .categories {
     width: 80%;
     margin-top: 20px;
+}
+
+.end {
+    border: solid red 3px;
 }
