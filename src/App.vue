@@ -55,7 +55,7 @@ export default {
   color: rgb(255, 255, 255);
   padding: 30px;
   background-color: #050e13;
-  height: 100vh;
+  min-height: 100vh;
 
 }
 </style>
