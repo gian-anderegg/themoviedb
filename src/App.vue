@@ -54,5 +54,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   padding: 30px;
+  background-color: #080808;
+
 }
 </style>
