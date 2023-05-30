@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      searchString: "hello world",
+      searchString: "",
     };
   },
   methods: {
@@ -31,7 +31,6 @@ export default {
       this.searchString = "";
     },
     categorySelected() {
-      console.log("hello niggers");
       this.searchString = "";
     },
   },
