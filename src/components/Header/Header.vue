@@ -9,7 +9,7 @@
             <div class="search">
                 <input type="search" class="searchbar form-control" v-model="searchString"/>
                 <button @click="search" class="button btn btn-primary">Search</button>
-                <button class="button btn btn-secondary">Clear</button>
+                <button @click="clear" class="button btn btn-secondary">Clear</button>
             </div>            
         </div>
         <div class="header__right">
