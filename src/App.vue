@@ -52,9 +52,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 30px;
-  background-color: #080808;
+  background-color: #050e13;
 
 }
 </style>
