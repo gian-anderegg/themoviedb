@@ -16,10 +16,21 @@ export default {
             movies: []
         }
     },
+    props: {
+        searchQuery: String
+    },
+    watch: {
+        searchQuery(newVal) {
+            if (newVal != '') {
+                this.categories = config.movieCategories
+            }
+        }
+    },
     methods: {
         // increment page function
         selectedStateChange(selected) {
             this.categories = selected;
+            this.$emit("categorySelected");
             this.selectedCategoryRessource = this.categories.filter(category => category.selected === true)[0].ressource;
             this.loadMoviesByCategory(this.selectedCategoryRessource);
         },
@@ -42,5 +53,5 @@ export default {
     },
     mounted() {
         this.loadMovies();
-    }
+    },
 }
