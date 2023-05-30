@@ -12,7 +12,7 @@ export default {
         }
     },
     async mounted() {
-        // load liked movies from local storage
+        // load liked movies from local storage (not from api)
         const res = await APIService.getMoviesContaining("The", 1);
         this.movies = res.data.results;
         console.log(res.data.results);

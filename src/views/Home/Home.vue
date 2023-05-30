@@ -7,6 +7,9 @@
     ></categories>
     <filmSection></filmSection>
   </div>
+  <div class="filmSectionWrapper">
+    <filmSection class="filmSection" :movies="movies" />
+  </div>
 </template>
 
 <script src="./Home.js" />

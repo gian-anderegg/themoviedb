@@ -1,11 +1,10 @@
 <template>
     <div>
-        <h1>Test</h1>
         <div class="film-section-wrapper">
             <div v-for="movie in movies" :key="movie">
                     <div class="grid-item">
                         <h4>{{ movie.title }}</h4>
-                        <img class="responsive-imgs" :src="movie.imageUrl">
+                        <img class="responsive-imgs" :src="'https://image.tmdb.org/t/p/original' + movie.poster_path">
                         <div class="gardiant-container"></div>
                 </div>
             </div>

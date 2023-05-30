@@ -1,20 +1,29 @@
 import filmSection from "../../components/filmSection/filmSection.vue"
 import categories from "../../components/categories/categories.vue"
+import APIService from "../../services/APIService"
+import config from "../../../config/config"
 
 export default {
     name: 'Home',
     components: {
         categories,
-        filmSection
+        filmSection,
     },
     data() {
         return {
-            categories: [{ selected: false, name: "Hello", id: 1 }, { selected: false, name: "Hello", id: 2 }, { selected: false, name: "Hello", id: 3 }, { selected: false, name: "Hello", id: 4 }]
+            categories: config.movieCategories,
+            movies: []
         }
     },
     methods: {
         selectedStateChange(selected) {
             this.categories = selected
         }
+    },
+    async mounted() {
+        const res = await APIService.getMoviesContaining("The", 1);
+        this.movies = res.data.results;
+
+        console.log(res.data.results);
     }
 }
