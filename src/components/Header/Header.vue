@@ -22,8 +22,8 @@
     </div>
     <div class="header__right">
       <select class="language" data-width="fit" @change="changeLanguage">
-        <option value="en">EN</option>
-        <option value="de">DE</option>
+        <option value="en">{{ $t("languageEn") }}</option>
+        <option value="de">{{ $t("languageDe") }}</option>
       </select>
       <router-link
         v-if="isOnHome"
