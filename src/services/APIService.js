@@ -5,6 +5,17 @@ export default {
     /* All API Requests in App belong here */
 
     /**
+     * - Request for all movies (with pages)
+     */
+    async getMovies(page) {
+        return await HTTPService.get('discover/movie', {
+            params: {
+                page: page
+            }
+        })
+    },
+
+    /**
      * - Requst for all Categories
      */
     async getMoviesByCategory(category, page) {

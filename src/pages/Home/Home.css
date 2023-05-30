@@ -3,6 +3,16 @@
     justify-content: center;
 }
 
+.filmSection {
+    width: 80%;
+}
+
+.filmSectionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .categories {
     width: 80%;
     margin-top: 20px;
