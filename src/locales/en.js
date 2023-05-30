@@ -12,6 +12,8 @@ export default {
     nowPlaying: "Now Playing",
     popular: "Popular",
     topRated: "Top Rated", 
-    upcoming: "Upcoming"
+    upcoming: "Upcoming",
+    languageDe: "De",
+    languageEn: "En"
     // Other translation keys and values specific to English
 };

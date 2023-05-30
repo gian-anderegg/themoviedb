@@ -6,6 +6,7 @@
 
 .filmSection {
     width: 80%;
+    overflow-y: auto;
 }
 
 .filmSectionWrapper {
@@ -18,4 +19,8 @@
 .categories {
     width: 80%;
     margin-top: 20px;
+}
+
+.end {
+    border: solid red 3px;
 }

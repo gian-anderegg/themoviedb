@@ -12,6 +12,8 @@ export default {
     nowPlaying: "Läuft gerade",
     popular: "Beliebt",
     topRated: "Bestbewertet", 
-    upcoming: "Kommende Filme"
+    upcoming: "Kommende Filme",
+    languageDe: "Deutschland Siegheil",
+    languageEn: "En"
     // Other translation keys and values specific to German
 };
