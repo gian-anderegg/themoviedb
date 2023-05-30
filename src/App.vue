@@ -1,37 +1,49 @@
 <template>
-  <Header @search="search" @clear="clear"/>
-  <router-view></router-view>
+  <Header
+    :searchStringProp="this.searchString"
+    :searchString="searchString"
+    @search="search"
+    @clear="clear"
+  />
+  <router-view
+    :searchQuery="this.searchString"
+    @category-selected="categorySelected"
+  ></router-view>
 </template>
 
 <script>
-import Header from './components/Header/Header.vue'
+import Header from "./components/Header/Header.vue";
 export default {
   name: "App",
   components: {
-    Header
+    Header,
   },
   data() {
     return {
-      searchString: '',
-    }
+      searchString: "hello world",
+    };
   },
   methods: {
     search(searchString) {
       this.searchString = searchString;
     },
-    clear(){
-      this.searchString = '';
-    }
-  }
+    clear() {
+      this.searchString = "";
+    },
+    categorySelected() {
+      console.log("hello niggers");
+      this.searchString = "";
+    },
+  },
 };
 </script>
 
 <style>
 :root {
-  --primary-color: #7149C6;
-  --secondary-color: #FC2947;
-  --third-color: #FE6244;
-  --fourth-color: #FFDEB9;
+  --primary-color: #7149c6;
+  --secondary-color: #fc2947;
+  --third-color: #fe6244;
+  --fourth-color: #ffdeb9;
   --grey: #343a40;
   --dark: #191b1d;
 }

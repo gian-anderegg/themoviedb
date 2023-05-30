@@ -3,10 +3,18 @@ import { i18n } from '../../main.js';
 export default {
     name: "Header",
     emits: ['search', 'clear'],
-    components: {},
+    props: {
+        searchStringProp: String
+    },
+    watch: {
+        searchStringProp(newVal) {
+            console.log("watch changed")
+            this.searchString = newVal
+        }
+    },
     data() {
         return {
-            searchString: '',
+            searchString: this.searchStringProp,
         }
     },
     computed: {
