@@ -10,9 +10,26 @@
     }
 }
 
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(+10px);
+    }
+    40% {
+        opacity: 0;
+        transform: translateX(+10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+
 .grid-item {
     position: relative;
     width: auto;
+    animation: fadeIn 0.5s ease-in;
 }
 
 .responsive-imgs {
