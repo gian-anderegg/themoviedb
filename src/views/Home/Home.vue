@@ -9,7 +9,6 @@
   <div class="filmSectionWrapper">
     <filmSection class="filmSection" :movies="movies" ref="filmSectionRef" />
   </div>
-  <div class="end" ref="intersectionTargetRef"></div>
 </template>
 
 <script src="./Home.js" />
