@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style>
+html {
+  background-color: #050e13;
+}
+
 :root {
   --primary-color: #7149c6;
   --secondary-color: #fc2947;
