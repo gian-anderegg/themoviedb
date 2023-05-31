@@ -68,6 +68,17 @@
     gap: 8px;
 }
 
+.favoritesButton {
+    color: white;
+    border: 1px solid white;
+    transition: .3s;
+}
+
+.favoritesButton:hover {
+    border: 1px solid white;
+    transform: scale(0.95);
+}
+
 .button-icon {
     background-image: url(../../assets/red-heart-icon.svg);
     background-size: 100% 100%;

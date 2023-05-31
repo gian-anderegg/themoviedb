@@ -23,14 +23,18 @@
       </div>
     </div>
     <div class="header__right">
-      <select class="language form-select" data-width="fit" @change="changeLanguage">
+      <select
+        class="language form-select"
+        data-width="fit"
+        @change="changeLanguage"
+      >
         <option value="en">{{ $t("languageEn") }}</option>
         <option value="de">{{ $t("languageDe") }}</option>
       </select>
       <router-link
         v-if="isOnHome"
         to="favourites"
-        class="button btn btn-outline-primary"
+        class="button btn favoritesButton"
         >{{ $t("favoritesButton") }} <span class="button-icon"></span
       ></router-link>
       <router-link
