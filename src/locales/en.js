@@ -4,7 +4,7 @@ export default {
     titleA: 'The Movie',
     titleB: 'Database',
     favorites: 'Your Favorite Movies',
-    favoritesButton: 'Your Favorites Movies',
+    favoritesButton: 'Your Favorite Movies',
     search: 'search',
     clear: 'clear',
     discoverMovies: 'Discover Movies',

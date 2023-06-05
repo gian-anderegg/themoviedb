@@ -22,6 +22,13 @@ export default {
           localStorage.setItem('favourites', JSON.stringify(this.clickedMovies));
         }
       },
+      loadMovieAnimation() {
+        const gridItems = this.$refs.gridItem;
+
+        for(let i=0; i < gridItems.length; i++) {
+          gridItems[i].classList.add('on-load-animation')
+        }
+      },
     },
   };
   
