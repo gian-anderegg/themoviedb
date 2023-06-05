@@ -1,6 +1,8 @@
 <template>
-  <h1>The Movie DB</h1>
-  <film-section :movies="movies"></film-section>
+  <div class="filmSectionWrapper">
+      <filmSection class="filmSection" :movies="movies" />
+  </div>
+  <div class="end"></div>
 </template>
 
 <script src="./Favourites.js" />
