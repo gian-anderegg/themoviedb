@@ -4,6 +4,16 @@
     grid-gap: 20px;
 }
 
+.search-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movies-found, .movies-shown {
+  font-size: clamp(14px, 1vw, 20px);
+  font-weight: bolder;
+}
+
 @media (max-width: 2000px) {
     .film-section-wrapper {
         grid-template-columns: repeat(4, 1fr);

@@ -17,6 +17,7 @@ export default {
             isSearch: true,
             pageCounter: 0,
             movies: [],
+            moviesFound: null,
         }
     },
     methods: {
@@ -69,16 +70,19 @@ export default {
         async loadMoviesByCategory(ressource) {
             const res = await APIService.getMoviesByCategory(ressource, 1);
             
+            
             if (ressource == 'latest') {
                 this.movies = [];
                 this.movies.push(res.data);
             } else {
                 this.movies = res.data.results;
             }
+            this.moviesFound = res.data.total_results;
         },
         async loadMovies() {
             const res = await APIService.getMovies(1);
             this.movies = res.data.results;
+            this.moviesFound = res.data.total_results;
         },
         // load next functions
         async loadNextMovies(page) {

@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div class="search-info">
+            <span class="movies-found">Movies Found: {{ moviesFound }}</span>
+            <span class="movies-shown">Movies Shown: {{ movies.length }}</span>
+        </div>
         <div class="film-section-wrapper">
             <div v-for="movie in movies" :key="movie">
                 <div class="grid-item" ref="gridItem">
