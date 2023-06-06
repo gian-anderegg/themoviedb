@@ -13,7 +13,7 @@
           <span v-for="n in rating" :key="n" class="movie-rating-hearts"></span>
         </div>
         <div class="movie-paragraph">
-          <span class="movie-description-title">Description</span>
+          <span class="movie-description-title">Description </span>
           <span class="movie-description">{{ movie.overview }}</span>
         </div>
         <div class="movie-trailer">
