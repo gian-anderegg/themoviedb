@@ -7,7 +7,7 @@
     ></categories>
   </div>
   <div class="filmSectionWrapper">
-    <filmSection class="filmSection" :movies="movies" ref="filmSectionRef" />
+    <filmSection class="filmSection" :movies="movies" :moviesFound="moviesFound" ref="filmSectionRef" />
   </div>
   <div ref="intersectionTargetRef"></div>
 </template>
