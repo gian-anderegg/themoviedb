@@ -8,7 +8,10 @@
   <router-view
     :searchQuery="this.searchString"
     @category-selected="categorySelected"
-  ></router-view>
+    v-slot="{ Component }"
+  >  
+  <component ref="view" :is="Component" />
+  </router-view>
 </template>
 
 <script>
@@ -25,10 +28,27 @@ export default {
   },
   methods: {
     search(searchString) {
+      this.clear();
+      var child = this.$refs.view;
       this.searchString = searchString;
+      if(child.$options.name == 'Home') {
+        child.isSearchQuery = true;
+        child.loadMoviesBySearchQuery(this.searchString, 1);
+        child.pageCounter = 0;
+      } else if(child.$options.name == 'Favourites') {
+        child.search(this.searchString);
+      }      
     },
     clear() {
+      var child = this.$refs.view.$.ctx;
       this.searchString = "";
+      if(child.$options.name == 'Home') {
+        child.isSearchQuery = false;
+        child.pageCounter = 0;
+        child.loadMovies(1);
+      } else {
+        child.clear();
+      }
     },
     categorySelected() {
       this.searchString = "";

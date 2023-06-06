@@ -9,13 +9,13 @@ export default {
     },
     watch: {
         searchStringProp(newVal) {
-            console.log("watch changed")
             this.searchString = newVal
         }
     },
     data() {
         return {
             searchString: this.searchStringProp,
+            selectedLanguage: localStorage.getItem("language")
         }
     },
     computed: {
