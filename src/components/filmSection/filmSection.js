@@ -29,6 +29,14 @@ export default {
           gridItems[i].classList.add('on-load-animation')
         }
       },
+      movie_clicked(movieId) {
+        const movieToEmit = this.movies.filter(x => x.id == movieId)[0]
+        console.log(movieToEmit)
+        this.$router.push({
+          name: 'destination',
+         //  params: { propValue }
+        });
+      }
     },
   };
   
