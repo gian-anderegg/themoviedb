@@ -10,7 +10,8 @@ export default {
     async getMovies(page) {
         return await HTTPService.get('discover/movie', {
             params: {
-                page: page
+                page: page,
+                //language: lang
             }
         })
     },
@@ -21,7 +22,8 @@ export default {
     async getMoviesByCategory(category, page) {
         return await HTTPService.get('movie/' + category, {
             params: {
-                page: page
+                page: page,
+                //language: lang
             }
         })
     },
@@ -33,7 +35,8 @@ export default {
         return await HTTPService.get('search/movie', {
             params: {
                 query: query,
-                page: page
+                page: page,
+                //language: lang
             }
         })
     }
