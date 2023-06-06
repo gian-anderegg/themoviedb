@@ -36,6 +36,7 @@ export default {
         console.log(id)
         const movieToShow = this.movies.filter(x => x.id == id)
         store.commit("setClickedMovie", movieToShow)
+        console.log(store.state.clickedMovie)
         this.$router.push({
           name: 'description',
         })

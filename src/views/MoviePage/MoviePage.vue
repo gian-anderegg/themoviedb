@@ -2,16 +2,15 @@
   <div class="movie-page">
     <div @click="goPageBack()" class="icon"></div>
     <div class="movie-info">
-      <img class="movie-image" src="@/assets/Gradient.jpeg" />
+      <img
+        class="movie-image"
+        :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+      />
       <div class="movie-data">
         <span class="movie-title">{{ movie.original_title }}</span>
         <span class="movie-release-date">{{ movie.release_date }}</span>
         <div class="movie-rating">
-          <span
-            v-for="n in movie.vote_average"
-            :key="n"
-            class="movie-rating-hearts"
-          ></span>
+          <span v-for="n in rating" :key="n" class="movie-rating-hearts"></span>
         </div>
         <div class="movie-paragraph">
           <span class="movie-description-title">Description</span>

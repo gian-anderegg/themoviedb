@@ -5,7 +5,8 @@ export default{
     name: 'MoviePage',
     data(){
       return{
-        movie: null
+        movie: null,
+        rating: null
       }
     },
     methods:{
@@ -13,8 +14,11 @@ export default{
         router.go(-1); // Go back to the previous page
       }
     },
-    mounted() {
-      this.movie = store.state.clickedMovie;
-      console.log(store.state.clickedMovie)
+    created() {
+      const storedMovie = store.state.clickedMovie;
+      console.log(storedMovie)
+      this.movie = storedMovie[0]
+      this.rating = Math.round(this.movie.vote_average, 0)
+      console.log(this.movie)
     }
 }
