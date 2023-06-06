@@ -1,3 +1,5 @@
+import store from '@/store'
+
 export default {
     name: 'filmSection',
     props: {
@@ -30,6 +32,14 @@ export default {
           gridItems[i].classList.add('on-load-animation')
         }
       },
+      movie_clicked(id) {
+        console.log(id)
+        const movieToShow = this.movies.filter(x => x.id == id)
+        store.commit("setClickedMovie", movieToShow)
+        this.$router.push({
+          name: 'description',
+        })
+      }
     },
   };
   
