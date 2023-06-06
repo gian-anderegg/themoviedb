@@ -16,17 +16,17 @@
           <span class="movie-description-title">Description</span>
           <span class="movie-description">{{ movie.overview }}</span>
         </div>
-      </div>
-    </div>
-    <div class="movie-trailer">
-      <div class="trailer-text">Trailer</div>
-      <div>
-        <iframe
-          class="trailer-video"
-          src="https://www.youtube.com/watch?v=vqs_0W-MSB0"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+        <div class="movie-trailer">
+          <div class="trailer-text">Trailer</div>
+          <div>
+            <iframe
+              class="trailer-video"
+              src="https://www.youtube.com/watch?v=vqs_0W-MSB0"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
