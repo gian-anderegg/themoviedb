@@ -1,5 +1,4 @@
 import filmSection from "../../components/filmSection/filmSection.vue"
-import APIService from "../../services/APIService"
 
 export default {
     name: 'Favourites',
@@ -9,7 +8,6 @@ export default {
     data() {
         return {
             movies: [],
-            //isLoading: false,
         }
     },
     async mounted() {

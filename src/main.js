@@ -18,8 +18,12 @@ const i18n = createI18n({
   },
 });
 
+function translate(key) {
+  return i18n.global.t(key).toString();
+}
+
 const app = createApp(App).use(router).use(i18n);
 
 app.mount('#app');
 
-export { i18n };
+export { i18n, translate };
