@@ -46,7 +46,6 @@ export default {
 
              if (isEndOfElement) {
                 this.pageCounter++;
-                console.log(this.pageCounter);
                 this.loadNextMovies(this.pageCounter);
              }
         },
@@ -131,9 +130,6 @@ export default {
 
         const observer = new IntersectionObserver(this.handleIntersection, options);
         observer.observe(this.$refs.intersectionTargetRef);
-
-        // test
-        //console.log(store.state.language);
     },
     beforeUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
