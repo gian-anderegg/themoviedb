@@ -9,8 +9,10 @@ import { createI18n } from 'vue-i18n';
 import de from './locales/de.js';
 import en from './locales/en.js';
 
+const savedLanguage = localStorage.getItem('language');
+
 const i18n = createI18n({
-  locale: 'en',
+  locale: savedLanguage, // (en = fallbacklanguage)
   fallbackLocale: 'de',
   messages: {
     de, // Assign the imported translation file to the 'de' locale

@@ -30,6 +30,9 @@ export default {
           gridItems[i].classList.add('on-load-animation')
         }
       },
+      movie_clicked() {
+        
+      }
     },
   };
   

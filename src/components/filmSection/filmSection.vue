@@ -16,7 +16,15 @@
                 </div>
             </div>
         </div>
+        <div class="gardiant-container"></div>
+        <span
+          class="heart-icon"
+          :class="{ filled: isMovieClicked(movie) }"
+          @click="handleClick(movie)"
+        ></span>
+      </div>
     </div>
+  </div>
 </template>
 
 <script src="./filmSection.js"></script>
