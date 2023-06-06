@@ -8,7 +8,6 @@ export default {
     data() {
         return {
             movies: [],
-            //isLoading: false,
         }
     },
     async mounted() {
