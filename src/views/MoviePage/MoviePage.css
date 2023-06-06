@@ -29,8 +29,8 @@
 }
 
 .movie-image {
-    width: 600px;
-    height: 1200px;
+    width: 700px;
+    height: 933px;
 }
 
 .movie-data {
@@ -88,7 +88,7 @@
 
 .trailer-video {
     margin: auto;
-    width: 400%;
+    width: 300%;
     overflow: hidden;
     aspect-ratio: 16 / 9;
 }
