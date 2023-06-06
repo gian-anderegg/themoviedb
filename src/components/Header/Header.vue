@@ -5,7 +5,9 @@
         <span class="title">{{ $t("titleA") }}</span>
         <span class="title">{{ $t("titleB") }}</span>
       </div>
-      <span v-if="isOnFavourites" class="title">{{ $t("favorites") }}</span>
+      <div class="favourites-container">
+        <span v-if="isOnFavourites" class="title">{{ $t("favorites") }}</span>
+      </div>
       <div class="search">
         <input
           type="search"
@@ -21,20 +23,24 @@
       </div>
     </div>
     <div class="header__right">
-      <select class="language" data-width="fit" @change="changeLanguage">
+      <select
+        class="language form-select"
+        data-width="fit"
+        @change="changeLanguage"
+      >
         <option value="en">{{ $t("languageEn") }}</option>
         <option value="de">{{ $t("languageDe") }}</option>
       </select>
       <router-link
         v-if="isOnHome"
         to="favourites"
-        class="button btn btn-outline-dark"
+        class="button btn favoritesButton"
         >{{ $t("favoritesButton") }} <span class="button-icon"></span
       ></router-link>
       <router-link
         v-if="isOnFavourites"
         to="home"
-        class="button btn btn-outline-dark"
+        class="button btn btn-outline-primary"
         >{{ $t("discoverMovies") }} <span class="search-icon"></span
       ></router-link>
     </div>

@@ -1,20 +1,20 @@
-import filmSection from "../../components/filmSection/filmSection"
+import filmSection from "../../components/filmSection/filmSection.vue"
 import APIService from "../../services/APIService"
 
 export default {
-    name: 'Home',
+    name: 'Favourites',
     components: {
         filmSection
     },
     data() {
         return {
-            movies: []
+            movies: [],
+            //isLoading: false,
         }
     },
     async mounted() {
         // load liked movies from local storage (not from api)
-        const res = await APIService.getMoviesContaining("The", 1);
-        this.movies = res.data.results;
-        console.log(res.data.results);
+        const favourites = localStorage.getItem('favourites');
+        if (favourites) this.movies = JSON.parse(favourites);
     }
 }

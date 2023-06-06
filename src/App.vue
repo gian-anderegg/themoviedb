@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style>
+html {
+  background-color: #050e13;
+}
+
 :root {
   --primary-color: #7149c6;
   --secondary-color: #fc2947;
@@ -55,6 +59,7 @@ export default {
   color: rgb(255, 255, 255);
   padding: 30px;
   background-color: #050e13;
+  min-height: 100vh;
 
 }
 </style>
