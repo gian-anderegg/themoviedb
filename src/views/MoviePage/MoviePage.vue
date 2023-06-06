@@ -19,13 +19,15 @@
       </div>
     </div>
     <div class="movie-trailer">
-      <span class="trailer-text">View the trailer here</span>
-      <iframe
-        class="trailer-video"
-        src="https://www.youtube.com/watch?v=vqs_0W-MSB0"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+      <div class="trailer-text">Trailer</div>
+      <div>
+        <iframe
+          class="trailer-video"
+          src="https://www.youtube.com/watch?v=vqs_0W-MSB0"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   </div>
 </template>
