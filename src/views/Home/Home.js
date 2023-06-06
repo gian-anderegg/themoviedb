@@ -58,10 +58,6 @@ export default {
                     this.loadNextMovies(this.pageCounter);
                 }
             }
-
-            
-
-             
         },
         selectedStateChange(selected) {
             this.categories = selected;
@@ -169,9 +165,6 @@ export default {
 
         const observer = new IntersectionObserver(this.handleIntersection, options);
         observer.observe(this.$refs.intersectionTargetRef);
-
-        // test
-        //console.log(store.state.language);
     },
     beforeUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
