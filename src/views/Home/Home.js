@@ -2,8 +2,6 @@ import filmSection from "../../components/filmSection/filmSection.vue"
 import categories from "../../components/categories/categories.vue"
 import APIService from "../../services/APIService"
 import config from "../../../config/config"
-import { languageHelper } from "../../helpers/languageHelper.js"
-import store from "@/store"
 
 export default {
     name: 'Home',
