@@ -2,6 +2,8 @@ import filmSection from "../../components/filmSection/filmSection.vue"
 import categories from "../../components/categories/categories.vue"
 import APIService from "../../services/APIService"
 import config from "../../../config/config"
+import { languageHelper } from "../../helpers/languageHelper.js"
+import store from "@/store"
 
 export default {
     name: 'Home',
@@ -17,6 +19,7 @@ export default {
             isSearch: true,
             pageCounter: 0,
             movies: [],
+            moviesFound: null,
         }
     },
     methods: {
@@ -69,16 +72,19 @@ export default {
         async loadMoviesByCategory(ressource) {
             const res = await APIService.getMoviesByCategory(ressource, 1);
             
+            
             if (ressource == 'latest') {
                 this.movies = [];
                 this.movies.push(res.data);
             } else {
                 this.movies = res.data.results;
             }
+            this.moviesFound = res.data.total_results;
         },
         async loadMovies() {
             const res = await APIService.getMovies(1);
             this.movies = res.data.results;
+            this.moviesFound = res.data.total_results;
         },
         // load next functions
         async loadNextMovies(page) {
@@ -129,6 +135,9 @@ export default {
 
         const observer = new IntersectionObserver(this.handleIntersection, options);
         observer.observe(this.$refs.intersectionTargetRef);
+
+        // test
+        //console.log(store.state.language);
     },
     beforeUnmount() {
         window.removeEventListener('scroll', this.handleScroll);

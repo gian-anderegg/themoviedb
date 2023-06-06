@@ -2,6 +2,7 @@ export default {
     name: 'filmSection',
     props: {
       movies: Array,
+      moviesFound: Number,
     },
     data() {
       return {

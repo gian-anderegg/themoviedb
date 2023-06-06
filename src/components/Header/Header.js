@@ -1,4 +1,5 @@
 import { i18n } from '../../main.js';
+import store from "@/store"
 
 export default {
     name: "Header",
@@ -35,7 +36,8 @@ export default {
         },
         changeLanguage(event) {
             i18n.global.locale = event.target.value;
-            console.log(i18n.global.locale);
+            store.commit('setQueryLanguage', i18n.global.locale);
+            localStorage.setItem('language', i18n.global.locale);
         },
     }
 };
