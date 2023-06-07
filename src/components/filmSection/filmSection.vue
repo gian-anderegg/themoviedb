@@ -23,7 +23,7 @@
           <span
             class="heart-icon"
             :class="{ filled: isMovieClicked(movie) }"
-            @click="handleClick(movie)"
+            @click.stop="handleClick(movie)"
           ></span>
         </div>
       </div>

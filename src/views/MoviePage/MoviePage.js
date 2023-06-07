@@ -16,9 +16,15 @@ export default{
     },
     created() {
       const storedMovie = store.state.clickedMovie;
-      console.log(storedMovie)
       this.movie = storedMovie[0]
       this.rating = Math.round(this.movie.vote_average, 0)
-      console.log(this.movie)
+    },
+    mounted() {
+      console.log('hi');
+      document.getElementById('page').style.backgroundImage = `url(https://image.tmdb.org/t/p/original/${this.movie.backdrop_path})`;
+      document.getElementById('app').style.padding = '0px';
+    },
+    unmounted() {
+      document.getElementById('app').style.padding = '30px';
     }
 }
