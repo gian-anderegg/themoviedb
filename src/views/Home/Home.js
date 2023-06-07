@@ -19,7 +19,7 @@ export default {
             isLoading: false,
             isSearch: true,
             isSearchQuery: false,
-            pageCounter: 0,
+            pageCounter: 1,
             movies: [],
             moviesFound: null,
         }
@@ -49,12 +49,10 @@ export default {
 
             if (isEndOfElement) {
                 if (this.isSearchQuery) {
-                    console.log('hello');
                     this.pageCounter++;
                     this.loadNextMoviesBySearchQuery(this.pageCounter);
                 } else {
                     this.pageCounter++;
-                    console.log(this.pageCounter);
                     this.loadNextMovies(this.pageCounter);
                 }
             }

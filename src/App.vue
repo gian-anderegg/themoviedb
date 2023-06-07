@@ -34,7 +34,7 @@ export default {
       if(child.$options.name == 'Home') {
         child.isSearchQuery = true;
         child.loadMoviesBySearchQuery(this.searchString, 1);
-        child.pageCounter = 0;
+        child.pageCounter = 1;
       } else if(child.$options.name == 'Favourites') {
         child.search(this.searchString);
       }      
@@ -44,7 +44,7 @@ export default {
       this.searchString = "";
       if(child.$options.name == 'Home') {
         child.isSearchQuery = false;
-        child.pageCounter = 0;
+        child.pageCounter = 1;
         child.loadMovies(1);
       } else {
         child.clear();
